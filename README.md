@@ -20,14 +20,21 @@ The information from the LLM will be used to form Flashcards, quizes etc. The qu
 You just need to provide all the study materials (slides) to the app and it will do the rest.
 
 
-### TODO
-- [ ] Start a python notebook for testing
-- [ ] Configure an LLM preferably from Groq cloud
-- [ ] Write PDF extracting mechanisms
-- [ ] Research about topic segmentation technologies.
-
-
 ## Segmentation technique
 The most basic segmantion from the slides is the pages. We can say that each page in the slides in talking about different concepts while bigger concepts can snap across multiple slides as well. Thus we cannot always be sure that a new topic is starting in every page. 
 
 What can be done is to get semantic embeddings from each sentences in the slide. The embeddings can then be matched to see if the topic is new or not. However, this requires more credits to be used by the paid users of chatGPT. For the free open-source LLM users, that is not a problem. 
+
+## Chosen techs
+- extracting text from pdfs : Pymupdf4ll
+- getting the images from pdfs:
+- NLP : LLMs- Ollama, OpenAI, Groq etc
+
+
+### TODO
+- [x] Start a python notebook for testing
+- [ ] Configure an LLM preferably from Groq cloud
+- [x] Download some slides from the university website and keep them in the test folder
+- [ ] Analyze the pdf to see where the page breaks are and the line breaks are. Can you make an algorithm which can detect these breaks?
+- [ ] Write PDF extracting mechanisms
+- [ ] Research about topic segmentation technologies.
